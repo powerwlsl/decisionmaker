@@ -1,0 +1,103 @@
+<div class="body-container">
+	<h1>Let's make decision about <%= @issue.issue_name %>!</h1>
+	<div class="container">
+		<div id="pros-box">
+			
+			<div id="header">
+				<h2>Pros</h2>
+			</div>
+			<div id="form_container">
+			  <form id="add-pro" method="post" action="/issue/<%=@issue.id%>/pros">
+			    <input id="user_input" type="text" name="pro" placeholder="type pro" required/>
+			      <input id="plus-submit" type="submit" value="+">
+			      <ul id="radio-ul">
+			          <li>
+			              <input type='radio' value='Very important' name='importance' id='radio1-pro'checked="checked"/>
+			              <label for='radio1-pro'>Very important</label>
+			          </li>
+			          <li>
+			              <input type='radio' value='Medium' name='importance'  id='radio2-pro'/>
+			              <label for='radio2-pro'>Medium</label>
+			          </li>
+			          <li>
+			              <input type='radio' value='Not that important' name='importance'  id='radio3-pro'/>
+			              <label for='radio3-pro'>Not that important</label>
+			          </li>
+			      </ul>
+			    
+			   </form>
+			</div>
+
+			<div id="pros">
+				<% @issue.pros.each do |pro| %>
+					<%= erb :"partials/_form_pro", layout:false, locals:{pro: pro, issue: @issue} %>
+				<% end %>
+			</div>
+
+		</div>
+
+
+		<div id="cons-box">
+
+			<div id="header">
+				<h2>Cons</h2>
+			</div>
+			<div id="form_container">
+			  <form id="add-con" method="post" action="/issue/<%=@issue.id%>/cons">
+			    <input id="user_input" type="text" name="con" placeholder="type con" required/>
+			    <input id="plus-submit" type="submit" value="+">
+			      <ul id="radio-ul">
+			          <li>
+			              <input type='radio' value='Very important' name='importance' id='radio1-con'checked="checked"/>
+			              <label for='radio1-con'>Very important</label>
+			          </li>
+			          <li>
+			              <input type='radio' value='Medium' name='importance'  id='radio2-con'/>
+			              <label for='radio2-con'>Medium</label>
+			          </li>
+			          <li>
+			              <input type='radio' value='Not that important' name='importance'  id='radio3-con'/>
+			              <label for='radio3-con'>Not that important</label>
+			          </li>
+			      </ul>
+			     
+			   </form>
+			</div>
+			<div id="cons">
+				<% @issue.cons.each do |con| %>
+					<%= erb :"partials/_form_con", layout:false, locals:{con: con, issue: @issue} %>
+				<% end %>
+			</div>
+		</div>
+
+	</div> 
+
+	<div class="bottom">
+		<div class="result-box">
+		</div>
+		<div class="bar-container">
+		  <div class="progress">
+		    <div class="progress-bar progress-bar-success" id="pro-bar" role="progressbar" style="width:50%">
+		    	Pros <%=@issue.pros_percentage%>%
+		    </div>
+
+		    <div class="progress-bar progress-bar-danger" role="progressbar" id="con-bar" style="width:50%">
+		      Cons <%=@issue.cons_percentage%>%
+		    </div>
+		  </div>
+		</div>
+		
+		<div id="bottom-button">
+			<form class="see-result" id="result" method="get" action="/issue/<%= @issue.id %>/result">
+				<input id="button" type="submit" value="See Result">
+			</form>
+
+			<form class="reset"  method="post" action="/issue/<%= @issue.id %>">
+				<input name="_method" type="hidden" value="delete">
+				<input id="button" type="submit" value="Reset">
+			</form>
+		</div>
+
+		<div class="fb-like" data-href="https://prosandcons-1.herokuapp.com" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+	</div>
+</div>

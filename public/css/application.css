@@ -1,0 +1,290 @@
+
+
+ul#radio-ul {
+    list-style: none;
+    padding-left: 0px
+
+}
+ul#radio-ul li {
+    display: inline-block;
+    margin:0px -10px;
+    color:white;
+    /*margin-left:;*/
+
+}
+input[type="radio"]{
+    visibility:hidden;
+}
+label {
+    cursor: pointer;
+    border:1px solid #CCC;
+    padding:5px 10px; 
+    background: #3498db;
+}
+label:hover{
+    background:#0074d9;
+}
+input:checked + label {
+    background: salmon;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.main-page-container{
+    margin:170px auto;
+    /*background: #ffff9d;*/
+    padding: 20px 10px;
+    width:900px;
+    border-radius: 10px;
+
+}
+#issue-input, {
+    margin:30px auto;
+}
+
+
+.body-container{
+    padding:30px 10px;
+    margin:100px auto;
+    background: #fff;
+    width:900px;
+    border-radius: 17px;
+
+}
+.bar-container {
+    width: 800px;
+    margin: auto auto;
+    display:none;
+}
+
+#pro-bar,#con-bar{
+    display: none;
+}
+
+/*#see_result:hover + .bar-container{
+    display: block;
+}*/
+.container {
+    width: 840px;
+    margin: auto auto;
+}
+#add {
+    padding: 8px 8px;    
+}
+
+#pros{
+    width: 330px;
+    margin:15px 15px;
+    display: block;
+    font-family: Courier, monospace;
+}
+
+#cons{
+    width: 330px;
+    margin:15px 15px;
+    display: block;
+    font-family:  Courier, monospace;
+
+}
+#pros-box {
+    width: 370px;
+    margin: auto 15px;
+    display: inline-block;
+    float:left;
+
+}
+
+#cons-box {
+    width: 370px;
+    margin-left: auto 15px;
+    display: inline-block;
+    float:right;
+
+}
+ 
+#user_input {
+    width: 300px;
+    margin-left:7px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+
+
+.bottom{
+    margin: 10px 20px;
+    width: 840px;
+    margin: auto auto;
+}
+
+select {
+    margin: auto;
+    display: block;
+}
+
+
+
+h1 {
+    width: 700px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 315px;
+    margin: 10px auto;
+    height: 2em;
+    padding-left: 5px;
+    display: block;
+}
+
+input[type="text"]#issue {
+    width: 400px;
+    margin: 10px auto;
+    height: 3.5em;
+    padding-left: 5px;
+    display: block;
+    border-radius: 6px;
+}
+
+input[type="submit"]#plus-submit{
+    width: 10px;
+    margin: 10px auto;
+    position: relative;
+    display: inline-block;
+    padding: 3px 20px 5px 10px;
+    color: #0074d9;
+    background: white;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border: 1px solid #0074d9;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+input[type="submit"]#plus-submit:hover{
+    border: 1px solid #004b8d;
+    color: #fff;
+    background: #004b8d;
+}
+input[type="submit"]#button
+{
+    width: 270px;
+    margin: 10px 10px;
+    position: relative;
+    display: inline-block;
+    float:left;
+    padding: 20px 20px;
+    color: #FFF;
+    background: #00a388;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+div#bottom-button{
+    width:800px;
+    height:110px;
+    margin: 10px auto
+}
+
+form#result
+{
+    position: relative;
+    display: block;
+    color: #FFF;
+    margin: 10px auto;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 600px ;
+    margin-bottom: 10px;
+
+}
+
+input[type="submit"]#button:hover{
+    background: #00856a;
+}
+input[type="submit"]#issue-input-submit{
+    margin:20px auto;
+    width: 340px;
+    position: relative;
+    display: block;
+    padding: 20px 20px;
+    color: #FFF;
+    background: #00a388;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+input[type="submit"]#issue-input-submit:hover{
+    background: #00856a; 
+}
+
+
+.result-box{
+    width: 100%;
+    height: 50px;
+    margin: 10px auto;
+    position: relative;
+    display: block;
+    padding: 10px 10px;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+
+}
+
+
+.bottom{
+    clear:both;
+
+}
+
+h1{
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color:#31353D;
+    margin: 20px auto;
+}
+h2{
+    font-family: "Courier New", Courier, monospace;
+    color:#31353D;
+    margin: 20px auto;
+
+}
+
+h4{
+    font-family: "Courier New", Courier, monospace;
+    color: red;
+    text-align:center;
+}
+
+span.importance{
+    font-weight: bold;
+    font-family: Courier;
+    color: #8e001c;
+
+}
+
+span.delete{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
