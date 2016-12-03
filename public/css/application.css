@@ -1,4 +1,4 @@
-img{
+img#logo{
     height: 40px;
     margin-left: 25px;
     margin-top: 25px;
@@ -264,6 +264,7 @@ h2{
     font-family: "Courier New", Courier, monospace;
     color:#31353D;
     margin: 20px auto;
+    float:left;
 
 }
 
@@ -284,6 +285,13 @@ span.delete{
     float: right;
 }
 
+img#loading-con,img#loading-pro{
+    float: left;
+    height:30px;
+    margin-top: 22px;
+    margin-left: 10px;
+    display: none;
+}
 
 
 

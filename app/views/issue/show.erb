@@ -1,10 +1,14 @@
 <div class="body-container">
 	<h1>Let's make decision about <%= @issue.issue_name %>!</h1>
+	
+
+
+
 	<div class="container">
 		<div id="pros-box">
 			
 			<div id="header">
-				<h2>Pros</h2>
+				<h2>Pros</h2><span><img id="loading-pro" src="/images/loader.gif"></span>
 			</div>
 			<div id="form_container">
 			  <form id="add-pro" method="post" action="/issue/<%=@issue.id%>/pros">
@@ -40,7 +44,7 @@
 		<div id="cons-box">
 
 			<div id="header">
-				<h2>Cons</h2>
+				<h2>Cons</h2><img id="loading-con" src="/images/loader.gif"></span>
 			</div>
 			<div id="form_container">
 			  <form id="add-con" method="post" action="/issue/<%=@issue.id%>/cons">

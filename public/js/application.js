@@ -1,6 +1,14 @@
 $(document).ready(function() {
+  $('form#issue').submit(function(event){
+    $("#issue-input-submit").val("Loading ...");
+  });
+
+
+
   $('form#add-pro').submit(function(event){
   	event.preventDefault();
+    
+    $("#loading-pro").show();
 
   	var url = $(this).attr("action");
   	var data = $(this).serialize();
@@ -9,12 +17,16 @@ $(document).ready(function() {
   	$.post(url,data,function(response){
 		  $('#pros').append(response);
 		  input.val("");
+      $("#loading-pro").hide();
   	});
+
 
   });
 
   $('form#add-con').submit(function(event){
     event.preventDefault();
+  
+    $("#loading-con").show();
 
     var url = $(this).attr("action");
     var data = $(this).serialize();
@@ -23,6 +35,8 @@ $(document).ready(function() {
     $.post(url,data,function(response){
       $('#cons').append(response);
       input.val("");
+      $("#loading-con").hide();
+
     });
 
   });
@@ -84,6 +98,19 @@ $(document).ready(function() {
     });
 
   });
+
+
+
+
+
+
+  // $(document).ajaxStart(function () {
+  //   $("#loading").show();
+  // });
+
+  // $(document).ajaxComplete(function () {
+  //   $("#loading").hide();
+  // });
 
 
 });
