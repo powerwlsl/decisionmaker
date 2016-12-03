@@ -25,7 +25,7 @@ class Issue < ActiveRecord::Base
     if pros_percentage > cons_percentage
       "You should do this!"
     elsif pros_percentage < cons_percentage
-      "I think it's not a good idea.."
+      "I don't think it's a good idea.."
     else
       "Could you give me more pros or cons? It's hard to decide.."
     end
