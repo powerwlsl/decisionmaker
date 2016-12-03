@@ -57,9 +57,9 @@ $(document).ready(function() {
   $('form#result').submit(function(event){
   	event.preventDefault();
   	var url = $(this).attr("action");
-
+    $('#button').val("Please Wait ...")
   	$.get(url,function(response){
-      $('#button').val("See Result Again");
+      
       $('.bar-container').show();
       $('#pro-bar').show();
       $('#con-bar').show();
@@ -69,10 +69,9 @@ $(document).ready(function() {
       $('#pro-bar').text("Pros "+ response.pros_percentage);
       $('#con-bar').css('width',response.cons_percentage);
       $('#con-bar').text("Cons "+ response.cons_percentage);
-
+      $('#button').val("See Result Again");
 
   	});
-
   });
 
 
